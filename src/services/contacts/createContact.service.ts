@@ -1,8 +1,8 @@
 import { AppDataSource } from "../../data-source";
 import { Contact } from "../../entities/contacts.entity";
-import { ICustomerContactRequest } from "../../interfaces";
+import { ICustomerRequest } from "../../interfaces";
 
-const createContactService = async (userData: ICustomerContactRequest) => {
+const createContactService = async (userData: ICustomerRequest) => {
   const contactRepository = AppDataSource.getRepository(Contact);
 
   //implementar logica pro userdata
