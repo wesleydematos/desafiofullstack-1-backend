@@ -3,7 +3,6 @@ import { Customer } from "../../entities/customers.entity";
 import { ICustomerRequest } from "../../interfaces";
 
 const createCustomerService = async (userData: ICustomerRequest) => {
-  console.log("cheguei aqui");
   const customerRepository = AppDataSource.getRepository(Customer);
 
   const customer = customerRepository.create(userData);
