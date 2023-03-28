@@ -1,11 +1,11 @@
 import { AppDataSource } from "../../data-source";
 import { Customer } from "../../entities/customers.entity";
 import { AppError } from "../../errors/appError";
-import { ICustomerUpdate } from "../../interfaces";
+import { ICustomerContactUpdate } from "../../interfaces";
 
 export const updateCustomerService = async (
   customerId: string,
-  customerData: ICustomerUpdate
+  customerData: ICustomerContactUpdate
 ): Promise<Customer> => {
   const customerRepository = AppDataSource.getRepository(Customer);
   const customerToUpdate = await customerRepository

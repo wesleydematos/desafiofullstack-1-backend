@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import {
+  ICustomerContactUpdate,
   ICustomerRequest,
   ICustomerResponse,
-  ICustomerUpdate,
 } from "../../interfaces";
 import createCustomerService from "../../services/customers/createCustomer.service";
 import { deleteCustomerService } from "../../services/customers/deleteCustomer.service";
@@ -23,12 +23,12 @@ export const listCustomersController = async (req: Request, res: Response) => {
 };
 
 export const updateCustomerController = async (req: Request, res: Response) => {
-  const customerData: ICustomerUpdate = req.body;
+  const customerData: ICustomerContactUpdate = req.body;
   const customerId: string = req.params.id;
 
-  const updatedUser = await updateCustomerService(customerId, customerData);
+  const updatedCustomer = await updateCustomerService(customerId, customerData);
 
-  return res.json(updatedUser);
+  return res.json(updatedCustomer);
 };
 
 export const deleteCustomerController = async (req: Request, res: Response) => {
