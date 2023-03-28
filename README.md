@@ -28,3 +28,58 @@ yarn dev
 - PRONTO!! O backend da aplicação já deve estar funcionando.
 
 ---
+
+## 2. Utilizando url do deploy
+
+- Basta utilizar a url: https://desafiofs1.onrender.com em suas requisições.
+
+## 3. Requisições
+
+- Rota /coustomers
+
+POST/url/coustomers = Cria um cliente. Os campos name, email e phoneNumber são obrigatórios. Exemplo de corpo da requisição (JSON):
+
+```
+{
+	"name": "name",
+	"email": "mail@gmail.com",
+	"phoneNumber": "99999999999"
+}
+```
+
+GET/url/coustomers = lista todos os clientes.
+
+PATCH/url/coustomers/:id = edita as informações de um cliente. É necessário passar um id de um cliente na URL da requisição, os campos email, name e phoneNumber podem ser alterados, não é obrigatório o envio dos 3. Exemplo de corpo da requisição (JSON):
+
+```
+{
+	"name": "new name",
+}
+```
+
+DELETE/url/costumers/:id = deleta um cliente. É necessário passar um id de um cliente na URL da requisição.
+
+- Rota /contacts
+
+POST/url/contacts = Cria um contato. Os campos name, email phoneNumber e customerId são obrigatórios. Exemplo de corpo da requisição (JSON):
+
+```
+{
+	"name": "name",
+	"email": "mail@gmail.com",
+	"phoneNumber": "99999999999",
+    "customerId": "d26fe3ee-aaba-47cd-bfea-848fa3fe3905"
+}
+```
+
+GET/url/contacts/:id = lista todos os contatos de um cliente. É necessário passar um id de um cliente na URL da requisição.
+
+PATCH/url/contacts/:id = edita as informações de um contato. É necessário passar um id de um contato na URL da requisição, os campos email, name e phoneNumber podem ser alterados, não é obrigatório o envio dos 3. Exemplo de corpo da requisição (JSON):
+
+```
+{
+	"name": "new name",
+}
+```
+
+DELETE/url/contacts/:id = deleta um contato. É necessário passar um id de um contato na URL da requisição.
