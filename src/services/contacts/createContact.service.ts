@@ -1,7 +1,7 @@
 import { AppDataSource } from "../../data-source";
 import { Contact } from "../../entities/contacts.entity";
 import { Customer } from "../../entities/customers.entity";
-import { AppError } from "../../errors/appError";
+import { AppError } from "../../errors";
 import { IContactRequest } from "../../interfaces";
 
 const createContactService = async (userData: IContactRequest) => {

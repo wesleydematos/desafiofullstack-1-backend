@@ -1,6 +1,6 @@
 import { AppDataSource } from "../../data-source";
 import { Customer } from "../../entities/customers.entity";
-import { AppError } from "../../errors/appError";
+import { AppError } from "../../errors";
 import { ICustomerContactUpdate } from "../../interfaces";
 
 export const updateCustomerService = async (
